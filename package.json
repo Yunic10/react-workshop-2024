@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "react-workshop",
+=======
+  "name": "workshop-2024",
+>>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +13,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "firebase": "^10.13.1",
     "next": "14.2.8",
     "react": "^18",
     "react-dom": "^18"
+=======
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "firebase": "^10.13.1",
+    "lucide-react": "^0.441.0",
+    "next": "14.2.8",
+    "react": "^18",
+    "react-dom": "^18",
+    "swr": "^2.2.5",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+>>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3
   },
   "devDependencies": {
     "eslint": "^8",

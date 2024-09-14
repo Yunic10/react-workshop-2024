@@ -1,10 +1,10 @@
 [
-    {
-      "name": "Rizal",
-      "age": 20
-    },
-    {
-      "name": "Jono",
-      "age": 30
-    }
-  ]
+  {
+    "name": "Rizal",
+    "age": 20
+  },
+  {
+    "name": "Jono",
+    "age": 30
+  }
+]

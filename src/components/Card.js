@@ -9,4 +9,8 @@ export function Card({ children, title }) {
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3

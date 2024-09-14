@@ -1,4 +1,5 @@
 const REGISTRATION_INPUT = [
+<<<<<<< HEAD
     {
         id : "name",
         label : "Name",
@@ -41,3 +42,48 @@ const LOGIN_INPUT = [
 ]
 
 export {REGISTRATION_INPUT, LOGIN_INPUT};
+=======
+  {
+    id: "name",
+    label: "Name",
+    required: true,
+    type: "text",
+  },
+  {
+    id: "email",
+    label: "Email",
+    required: true,
+    type: "email",
+  },
+  {
+    id: "password",
+    label: "Password",
+    required: true,
+    type: "password",
+  },
+  // {
+  //   id: "confirmation_password",
+  //   label: "Confirmation Password",
+  //   required: true,
+  //   type: "password",
+  //   placeholder: "Confirm your password",
+  // },
+];
+
+const LOGIN_INPUT = [
+  {
+    id: "email",
+    label: "Email",
+    required: true,
+    type: "email",
+  },
+  {
+    id: "password",
+    label: "Password",
+    required: true,
+    type: "password",
+  },
+];
+
+export { REGISTRATION_INPUT, LOGIN_INPUT };
+>>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3

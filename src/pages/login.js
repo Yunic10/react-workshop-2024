@@ -1,25 +1,58 @@
 import Link from "next/link";
 import { InputGroup } from "../components/InputGroup";
+import useSWRMutation from "swr/mutation";
 import { Card } from "../components/Card";
-import { LOGIN_INPUT } from "../configs/form";
 import { Button } from "../components/Button";
 import { Copyright } from "../components/Copyright";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useAuth } from "../auth/AuthProvider";
+import { useRouter } from "next/router";
+import { signInWithEmailAndPassword } from "@/configs/firebaseAuth";
+import { PageLoading } from "@/components/PageLoading";
 
 export default function LoginPage() {
+  const auth = useAuth();
+  const router = useRouter();
+  const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
+<<<<<<< HEAD
+=======
+  if (loading) {
+    return <PageLoading />;
+  }
+
+>>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3
   return (
     <div className="bg-gray-100 flex justify-center items-center h-screen">
       <div className="w-full max-w-md">
         <Card title="Login">
+
+          {error ? (
+            <div
+              className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4"
+              role="alert"
+            >
+              <p class="font-bold">Error</p>
+              <p>{error}</p>
+            </div>
+          ) : null}
           <form
-            onSubmit={(event) => {
+            onSubmit={async (event) => {
               event.preventDefault();
-              console.log(form);
+              try {
+                setLoading(true);
+                await signInWithEmailAndPassword(form.email, form.password);
+                router.replace("/");
+              } catch (error) {
+                setError(error.message);
+              } finally {
+                setLoading(false);
+              }
             }}
           >
             <InputGroup
@@ -58,10 +91,12 @@ export default function LoginPage() {
                 Belum punya akun?
               </Link>
               <Button
-                label="Sign In"
                 type="submit"
-                disabled={!(form.email && form.password)}
-              />
+                disabled={!(form.email && form.password) || loading}
+                isLoading={loading}
+              >
+                Sign In
+              </Button>
             </div>
           </form>
         </Card>
