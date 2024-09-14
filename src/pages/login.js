@@ -20,13 +20,11 @@ export default function LoginPage() {
     password: "",
   });
 
-<<<<<<< HEAD
-=======
+
   if (loading) {
     return <PageLoading />;
   }
 
->>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3
   return (
     <div className="bg-gray-100 flex justify-center items-center h-screen">
       <div className="w-full max-w-md">

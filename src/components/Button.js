@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-export function Button({className, type = "button", label, onClick, disabled = false}){
-    return (
-        <button
-              className = {`${className} font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline`}
-              type={type}
-              disabled={disabled}
-              onClick={disabled ? undefined : onClick}
-            >
-              {label}
-        </button>
-    )
-}
-=======
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
@@ -67,4 +51,3 @@ const Button = React.forwardRef(
 Button.displayName = "Button";
 
 export { Button, buttonVariants };
->>>>>>> e239d19c455d31ced2865a616efd12d1b5e4bbd3
