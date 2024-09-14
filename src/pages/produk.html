@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-8">
+    <h2 class="text-3xl font-bold mb-6">Product List</h2>
+    <table class="min-w-full bg-white rounded-lg shadow-lg">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="py-2 px-4">#</th>
+          <th class="py-2 px-4">Product Name</th>
+          <th class="py-2 px-4">Price</th>
+          <th class="py-2 px-4">Stock</th>
+          <th class="py-2 px-4">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border px-4 py-2">1</td>
+          <td class="border px-4 py-2">Product A</td>
+          <td class="border px-4 py-2">$10</td>
+          <td class="border px-4 py-2">100</td>
+          <td class="border px-4 py-2">
+            <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Edit</button>
+            <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+          </td>
+        </tr>
+        <!-- Tambahkan baris produk lainnya -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
