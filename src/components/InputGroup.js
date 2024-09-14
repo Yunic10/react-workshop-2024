@@ -21,8 +21,8 @@ export function InputGroup({
         id={id}
         type={type}
         placeholder={placeholder}
+        value={value}
         onChange={onChange}
-        value={value} // Menggunakan id sebagai key untuk nilai
       />
     </div>
   );
